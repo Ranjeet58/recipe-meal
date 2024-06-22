@@ -1,0 +1,55 @@
+@import './variables';
+@import './mixins';
+
+.list {
+ 
+  &.menu__listWraper{
+    text-align: center;
+    display: grid;
+    @include grid-layout($columns: 6, $gap: 2.5rem);
+    @include responsive('767px') {
+      @include grid-layout($columns: 3, $gap: 1rem);
+    }
+    .shimmer{
+     
+      .shimmer-image{
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+      }
+    }
+     img{
+      width: 100%;
+      height: 95px;
+      object-fit: cover;
+      object-position: center;
+      @include responsive('767px') {
+        height: 70px;
+      }
+     }
+     .heading{
+      font-size: $heading-large;
+      font-weight: 600;
+      color: $primary-text-color;
+      margin-top: 10px;
+      display: block;
+      opacity: 0.8;
+     }
+  }
+}
+
+.app__heading{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  h4{
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  a{
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+}
+

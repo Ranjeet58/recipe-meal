@@ -1,0 +1,54 @@
+@import './variables';
+@import './mixins';
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+body {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  // background-color: $bg-color;
+  color: $primary-color;
+}
+
+.container {
+  max-width: $container;
+  margin: 0 auto;
+  @include responsive('767px') {
+    margin: 0px 15px;
+  }
+  @include responsive("1180px"){
+    margin: 0 1.5rem;
+  }
+}
+
+.section {
+  margin-bottom: 4rem;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-small;
+}
+ ul{
+  padding: 0;
+  margin: 0;
+ }
+ li{
+  list-style-type: none;
+ }
+a{
+  text-decoration: none;
+}
+.layout__wrapper{
+  padding: 2rem 1rem;
+  @include responsive('767px') {
+    overflow: hidden;
+    padding: 2rem 0.1rem;
+  }
+}
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,19 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @mixin responsive($breakpoint) {
+    @media (max-width: $breakpoint) {
+      @content;
+    }
+  }
+  
+
+  @mixin grid-layout($columns, $gap) {
+    display: grid;
+    align-items: start;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $gap;
+  }

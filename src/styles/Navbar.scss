@@ -1,0 +1,92 @@
+@import './variables';
+@import './mixins';
+
+.navbar {
+  background-color: $secondary-color;
+  padding: $spacing-medium 0;
+  box-shadow: 0 15px 40px -20px rgba(40,44,63,.15);
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 0 10rem;
+    @include responsive('767px') {
+      margin: 0px 15px;
+    }
+    @include responsive('1180px') {
+      margin: 0 2rem;
+    }
+  }
+  
+  &__list {
+    opacity: 0;
+    .nav__barmenu{
+      padding-top:2.5rem;
+      transition: all;
+      transition-duration: .25s;
+      position: fixed;
+      top: 0;
+      z-index: 999;
+      width: 100%;
+      max-width: 400px;
+      height: 100%;
+      right: -400px;
+      background-color: $secondary-color;
+    }
+    
+     
+    &.active{
+      opacity: 1;
+      .nav__barmenu{
+        right: 0;
+      }
+      .navbardrop{
+        display: block;
+      }
+    }
+    .navbardrop{
+      position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    transition: all;
+    transition-duration: .25s;
+    touch-action: none;
+    background: #0000004d;
+    display: none;
+    }
+  }
+
+  &__item {
+    margin: 2rem 2rem;
+    a {
+      color: $primary-text-color;
+      text-decoration: none;
+      font-weight: 600;
+       font-size: 1.09rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+      
+    }
+  }
+}
+
+.nav__menu-icon{
+   z-index: 1000;
+   cursor: pointer;
+   position: absolute;
+   right: 0;
+   &.menuactive{
+     right: 20px !important;
+     position: fixed;
+     top:20px;
+   }
+   svg{
+    font-size: 2rem;
+   }
+}

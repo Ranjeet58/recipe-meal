@@ -1,0 +1,10 @@
+@import './variables';
+@import './mixins';
+
+.meals__wrapper{
+    padding: 2.5rem 0;
+   
+    h1{
+        padding-bottom: 1.5rem;
+    }
+}
