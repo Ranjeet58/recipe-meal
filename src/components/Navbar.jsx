@@ -34,7 +34,7 @@ const Navbar = () => {
               <Link to="/favourites" onClick={toggleMenu}>My Favourites</Link>
             </li>
             <li className="navbar__item">
-              <Link to="/random-meal" onClick={toggleMenu}>Meal Generator</Link>
+              <Link to="/random-meal" onClick={toggleMenu}>Random meal generate</Link>
             </li>
             <li className="navbar__item">
               <Link to="/about-me" onClick={toggleMenu}>About Me</Link>
